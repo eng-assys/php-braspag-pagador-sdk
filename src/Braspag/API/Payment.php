@@ -94,6 +94,28 @@ class Payment implements \JsonSerializable
 
     private $address;
 
+    private $assignor;
+
+    private $demonstrative;
+
+    private $identification;
+
+    private $instructions;
+
+    private $nullifyDays;
+
+    private $daysToFine;
+
+    private $fineRate;
+
+    private $fineAmount;
+
+    private $daysToInterest;
+
+    private $interestRate;
+
+    private $interestAmount;
+
     public function __construct($amount = 0, $installments = 1)
     {
         $this->setAmount($amount);
@@ -138,6 +160,17 @@ class Payment implements \JsonSerializable
         $this->barCodeNumber   =  isset($data->BarCodeNumber)?$data->BarCodeNumber: null;
         $this->digitableLine   =  isset($data->DigitableLine)?$data->DigitableLine: null;
         $this->address         =  isset($data->Address)?$data->Address: null;
+        $this->assignor = isset($data->Assignor)?$data->Assignor: null; 
+        $this->demonstrative = isset($data->Demonstrative)?$data->Demonstrative: null; 
+        $this->identification = isset($data->Identification)?$data->Identification: null; 
+        $this->instructions = isset($data->Instructions)?$data->Instructions: null; 
+        $this->nullifyDays = isset($data->NullifyDays)?$data->NullifyDays: null; 
+        $this->daysToFine = isset($data->DaysToFine)?$data->DaysToFine: null; 
+        $this->fineRate = isset($data->FineRate)?$data->FineRate: null; 
+        $this->fineAmount = isset($data->FineAmount)?$data->FineAmount: null; 
+        $this->daysToInterest = isset($data->DaysToInterest)?$data->DaysToInterest: null; 
+        $this->interestRate = isset($data->InterestRate)?$data->InterestRate: null; 
+        $this->interestAmount = isset($data->InterestAmount)?$data->InterestAmount: null; 
 
         $this->authenticationUrl = isset($data->AuthenticationUrl)? $data->AuthenticationUrl: null;
         $this->tid = isset($data->Tid)? $data->Tid: null;
@@ -619,4 +652,104 @@ class Payment implements \JsonSerializable
         $this->address = $address;
         return $this;
     }
+
+    public function getAssignor(){
+        return $this->assignor;
+    }
+
+    public function setAssignor($assignor){
+        return $this->assignor = $assignor;
+        return $this;
+    }
+
+    public function getDemonstrative(){
+        return $this->demonstrative;
+    }
+
+    public function setDemonstrative($demonstrative){
+        return $this->demonstrative = $demonstrative;
+        return $this;
+    }
+
+    public function getIdentification(){
+        return $this->identification;
+    }
+
+    public function setIdentification($identification){
+        return $this->identification = $identification;
+        return $this;
+    }
+
+    public function getInstructions(){
+        return $this->instructions;
+    }
+
+    public function setInstructions($instructions){
+        return $this->instructions = $instructions;
+        return $this;
+    }
+
+    public function getNullifyDays(){
+        return $this->nullifyDays;
+    }
+
+    public function setNullifyDays($nullifyDays){
+        return $this->nullifyDays = $nullifyDays;
+        return $this;
+    }
+
+    public function getDaysToFine(){
+        return $this->daysToFine;
+    }
+
+    public function setDaysToFine($daysToFine){
+        return $this->daysToFine = $daysToFine;
+        return $this;
+    }
+
+    public function getFineRate(){
+        return $this->fineRate;
+    }
+
+    public function setFineRate($fineRate){
+        return $this->fineRate = $fineRate;
+        return $this;
+    }
+
+    public function getFineAmount(){
+        return $this->fineAmount;
+    }
+
+    public function setFineAmount($fineAmount){
+        return $this->fineAmount = $fineAmount;
+        return $this;
+    }
+
+    public function getDaysToInterest(){
+        return $this->daysToInterest;
+    }
+
+    public function setDaysToInterest($daysToInterest){
+        return $this->daysToInterest = $daysToInterest;
+        return $this;
+    }
+
+    public function getInterestRate(){
+        return $this->interestRate;
+    }
+
+    public function setInterestRate($interestRate){
+        return $this->interestRate = $interestRate;
+        return $this;
+    }
+
+    public function getInterestAmount(){
+        return $this->interestAmount;
+    }
+
+    public function setInterestAmount($interestAmount){
+        return $this->interestAmount = $interestAmount;
+        return $this;
+    }
+
 }
