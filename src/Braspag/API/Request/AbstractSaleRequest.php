@@ -1,8 +1,8 @@
 <?php
-namespace Braspag\API\Request;
+namespace BraspagPagador\API\Request;
 
-use Braspag\API\Merchant;
-use Braspag\API\Sale;
+use BraspagPagador\API\Merchant;
+use BraspagPagador\API\Sale;
 
 abstract class AbstractSaleRequest
 {

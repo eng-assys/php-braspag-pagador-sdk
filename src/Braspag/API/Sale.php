@@ -1,5 +1,5 @@
 <?php
-namespace Braspag\API;
+namespace BraspagPagador\API;
 
 class Sale implements \JsonSerializable
 {
@@ -25,12 +25,12 @@ class Sale implements \JsonSerializable
         $dataProps = get_object_vars($data);
 
         if (isset($dataProps['Customer'])) {
-            $this->customer = new \Braspag\API\Customer();
+            $this->customer = new \BraspagPagador\API\Customer();
             $this->customer->populate($data->Customer);
         }
 
         if (isset($dataProps['Payment'])) {
-            $this->payment = new \Braspag\API\Payment();
+            $this->payment = new \BraspagPagador\API\Payment();
             $this->payment->populate($data->Payment);
         }
 

@@ -1,11 +1,11 @@
 <?php
-namespace Braspag\API;
+namespace BraspagPagador\API;
 
-use Braspag\API\Merchant;
-use Braspag\API\Request\CreateSaleRequest;
-use Braspag\API\Request\QuerySaleRequest;
-use Braspag\API\Request\UpdateSaleRequest;
-use Braspag\API\Request\QueryRecurrentPaymentRequest;
+use BraspagPagador\API\Merchant;
+use BraspagPagador\API\Request\CreateSaleRequest;
+use BraspagPagador\API\Request\QuerySaleRequest;
+use BraspagPagador\API\Request\UpdateSaleRequest;
+use BraspagPagador\API\Request\QueryRecurrentPaymentRequest;
 
 /**
  * The Braspag SDK front-end;
@@ -22,10 +22,10 @@ class Braspag
      * requests will be send
      *
      * @param
-     *            \Braspag\API\Merchant merchant
+     *            \BraspagPagador\API\Merchant merchant
      *            The merchant credentials
      * @param
-     *            \Braspag\API\Environment environment
+     *            \BraspagPagador\API\Environment environment
      *            The environment: {@link Environment::production()} or
      *            {@link Environment::sandbox()}
      */
@@ -43,9 +43,9 @@ class Braspag
      * Send the Sale to be created and return the Sale with tid and the status
      * returned by Braspag.
      *
-     * @param \Braspag\API\Sale $sale
+     * @param \BraspagPagador\API\Sale $sale
      *            The preconfigured Sale
-     * @return \Braspag\API\Sale The Sale with authorization, tid, etc. returned by Braspag.
+     * @return \BraspagPagador\API\Sale The Sale with authorization, tid, etc. returned by Braspag.
      * @throws BraspagRequestException if anything gets wrong.
      */
     public function createSale(Sale $sale)
@@ -60,7 +60,7 @@ class Braspag
      *
      * @param string $paymentId
      *            The paymentId to be queried
-     * @return \Braspag\API\Sale The Sale with authorization, tid, etc. returned by Braspag.
+     * @return \BraspagPagador\API\Sale The Sale with authorization, tid, etc. returned by Braspag.
      * @throws BraspagRequestException if anything gets wrong.
      */
     public function getSale($paymentId)
@@ -75,7 +75,7 @@ class Braspag
      *
      * @param string $recurrentPaymentId
      *            The RecurrentPaymentId to be queried
-     * @return \Braspag\API\RecurrentPayment The RecurrentPayment with authorization, tid, etc. returned by Braspag.
+     * @return \BraspagPagador\API\RecurrentPayment The RecurrentPayment with authorization, tid, etc. returned by Braspag.
      * @throws BraspagRequestException if anything gets wrong.
      */
     public function getRecurrentPayment($recurrentPaymentId)
@@ -92,7 +92,7 @@ class Braspag
      *            The paymentId to be queried
      * @param integer $amount
      *            Order value in cents
-     * @return \Braspag\API\Sale The Sale with authorization, tid, etc. returned by Braspag.
+     * @return \BraspagPagador\API\Sale The Sale with authorization, tid, etc. returned by Braspag.
      * @throws BraspagRequestException if anything gets wrong.
      */
     public function cancelSale($paymentId, $amount = null)
@@ -115,7 +115,7 @@ class Braspag
      * @param integer $serviceTaxAmount
      *            Amount of the authorization should be destined for the service
      *            charge
-     * @return \Braspag\API\Payment The captured Payment.
+     * @return \BraspagPagador\API\Payment The captured Payment.
      *
      * @throws BraspagRequestException if anything gets wrong.
      */

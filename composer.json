@@ -1,7 +1,7 @@
 {
 	"autoload" : {
 		"psr-4" : {
-			"Braspag\\" : "src/Braspag"
+			"BraspagPagador\\" : "src/Braspag"
 		}
 	},
 	"name" : "gerenciagram/braspag-pagador-api-php",

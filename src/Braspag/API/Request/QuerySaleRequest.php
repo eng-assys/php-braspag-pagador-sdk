@@ -1,10 +1,10 @@
 <?php
-namespace Braspag\API\Request;
+namespace BraspagPagador\API\Request;
 
-use Braspag\API\Request\AbstractSaleRequest;
-use Braspag\API\Environment;
-use Braspag\API\Merchant;
-use Braspag\API\Sale;
+use BraspagPagador\API\Request\AbstractSaleRequest;
+use BraspagPagador\API\Environment;
+use BraspagPagador\API\Merchant;
+use BraspagPagador\API\Sale;
 
 class QuerySaleRequest extends AbstractSaleRequest
 {

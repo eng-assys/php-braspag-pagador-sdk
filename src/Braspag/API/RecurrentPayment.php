@@ -1,5 +1,5 @@
 <?php
-namespace Braspag\API;
+namespace BraspagPagador\API;
 
 class RecurrentPayment implements \JsonSerializable
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Braspag\API\Request;
+namespace BraspagPagador\API\Request;
 
 class BraspagError
 {
