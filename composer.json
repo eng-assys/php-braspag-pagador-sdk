@@ -4,7 +4,7 @@
 			"Braspag\\" : "src/Braspag"
 		}
 	},
-	"name" : "gerenciagram/BraspagApiPhpSdk",
+	"name" : "gerenciagram/braspag-pagador-api-php",
 	"description" : "Integração com a API da Braspag",
 	"license" : "MIT",
 	"type" : "library",
